@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Challenge</title>
+</head>
+<body>
+
+    <h1>JavaScript Event Challenge</h1>
+
+    <!-- Double-clicking this button calls the function -->
+    <button ondblclick="showMessage()">Double-click me!</button>
+
+    <p id="message">Try double-clicking the button above.</p>
+
+    <script>
+        // Change the paragraph when the dblclick event occurs
+        function showMessage() {
+            document.getElementById("message").textContent =
+                "Success! The double-click event worked!";
+        }
+    </script>
+
+</body>
+</html>
