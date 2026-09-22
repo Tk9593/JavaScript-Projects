@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary Operators and Constructors</title>
+
+    <!-- Link to this project's JavaScript file -->
+    <script src="JS/main.js" defer></script>
+</head>
+<body>
+    <h1>Ternary Operators and Constructors</h1>
+
+    <h2>Ride Height Check</h2>
+    <p>For this exercise, riders must be at least 52 centimeters tall.</p>
+    <label for="Height">Height in centimeters:</label>
+    <input id="Height" type="number" min="0" value="0">
+    <button onclick="Ride_Function()">Check Height</button>
+    <p id="Ride"></p>
+
+    <h2>Voting Age Check</h2>
+    <label for="Age">Enter your age:</label>
+    <input id="Age" type="number" min="0" step="1" value="0">
+    <button onclick="Vote_Function()">Check Age</button>
+    <p id="Vote"></p>
+
+    <h2>Vehicle Constructor</h2>
+    <button onclick="myFunction()">Show Vehicle</button>
+    <p id="Keywords_and_Constructors"></p>
+
+    <h2>Nested Function</h2>
+    <p id="Nested_Function" onclick="add_Strings()">
+        Click here to run the nested function.
+    </p>
+
+    <h2>Reserved Word Challenge</h2>
+    <button onclick="reserved_Word()">Show Reserved Word</button>
+    <p id="Reserved_Word"></p>
+</body>
+</html>
