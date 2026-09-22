@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project7 Scope and Time Functions</title>
+    <script src="JS/main.js" defer></script>
+</head>
+<body>
+    <h1>Scope and Time Functions</h1>
+
+    <!-- Demonstrate global and local variables. -->
+    <button onclick="local_Example()">Test Variables</button>
+    <p id="Scope_Result"></p>
+
+    <!-- Trigger the intentional error for console debugging. -->
+    <p>Open Chrome DevTools Console before clicking this button.</p>
+    <button onclick="error_Example()">Test Intentional Error</button>
+
+    <!-- Call the date method function. -->
+    <p id="Greeting" onclick="get_Date()">Click here for a greeting.</p>
+
+    <!-- Enter a score to test an if/else statement. -->
+    <p>Enter your score between 0 and 100.</p>
+    <input id="Student_Score" type="number" min="0" max="100">
+    <button onclick="check_Score()">Check Result</button>
+    <p id="Score_Result"></p>
+
+    <!-- Display a greeting based on the current time. -->
+    <button onclick="Time_function()">Get Time Greeting</button>
+    <p id="Time_of_day"></p>
+</body>
+</html>
