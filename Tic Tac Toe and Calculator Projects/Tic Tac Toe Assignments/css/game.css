@@ -1,0 +1,35 @@
+/* Center the game and position the canvas over it. */
+.center-container {
+    width: 608px;
+    margin: 50px auto 0;
+    position: relative;
+}
+
+/* Keep only the inner grid borders. */
+table {
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+/* Create the nine game squares. */
+td {
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    border: 4px solid purple;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Overlay the canvas while allowing clicks through it. */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+h1 {
+    text-align: center;
+}
