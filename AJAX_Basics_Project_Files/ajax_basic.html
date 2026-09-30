@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Basic AJAX Demo</title>
+
+    <!-- Load the page styling. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h2>Get The Latest Content:</h2>
+
+        <!-- AJAX will replace this area with the requested content. -->
+        <div class="content" id="content">
+            <input type="button"
+                   class="button"
+                   value="Get Content"
+                   id="btn_content"
+                   onclick="getContent();">
+        </div>
+    </div>
+
+    <script>
+        // Run this function when the Get Content button is clicked.
+        function getContent() {
+            // Create a request to communicate with the server.
+            var ajax = new XMLHttpRequest();
+
+            // Run this callback whenever the request state changes.
+            ajax.onreadystatechange = function () {
+                console.log("Ready state:", ajax.readyState);
+
+                // State 4 means the request has finished.
+                if (ajax.readyState === 4) {
+                    if (ajax.status === 200) {
+                        // Display the returned HTML without reloading.
+                        document.getElementById("content").innerHTML =
+                            ajax.responseText;
+                    } else {
+                        document.getElementById("content").textContent =
+                            "Unable to load content. HTTP status: " +
+                            ajax.status;
+                    }
+                }
+            };
+
+            // Prepare an asynchronous request for content.html.
+            ajax.open("GET", "content.html", true);
+
+            // Hide the button and send the request.
+            document.getElementById("btn_content").style.display = "none";
+            ajax.send();
+        }
+    </script>
+</body>
+</html>
